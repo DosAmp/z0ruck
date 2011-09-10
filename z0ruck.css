@@ -1,0 +1,35 @@
+/* source: http://z0r.de/inc/z0r.css
+ * simplified and cleaned from social media elements */
+
+body {
+	background: rgb(0, 0, 0);
+	font-family: Verdana, Helvetica, sans-serif;
+	font-weight: bold;
+	font-size: 11px;
+}
+body, a, a:visited {
+	color: rgb(255, 255, 255);
+}
+a {
+	text-decoration: none;
+}
+#onlinelink a {
+	text-decoration: underline;
+}
+#onlinelink a:hover {
+	color: rgb(192, 192, 192);
+}
+#main, #content {
+	margin-left: auto;
+	margin-right: auto;
+	padding: 0;
+}
+#onlinelink, #navigation {
+	text-align: center;
+}
+#content, #main p {
+	margin-bottom: 5px;
+}
+.actiontext {
+	cursor: pointer;
+}
