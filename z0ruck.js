@@ -74,36 +74,18 @@ function replaceFlash() {
 			<param name="src" value="$FLASHPATH">
 		</object> */
 	var flashobj = document.createElement("object");
-
-	var objattr1 = document.createAttribute("type");
-		objattr1.nodeValue = "application/x-shockwave-flash";
-		flashobj.setAttributeNode(objattr1);
-	var objattr2 = document.createAttribute("data");
-		objattr2.nodeValue = flashpath;
-		flashobj.setAttributeNode(objattr2);
-	var objattr3 = document.createAttribute("width");
-		// spot the uncertain Java developer :p
-		objattr3.nodeValue = FLASH_WIDTH.toString();
-		flashobj.setAttributeNode(objattr3);
-	var objattr4 = document.createAttribute("height");
-		objattr4.nodeValue = FLASH_HEIGHT.toString();
-		flashobj.setAttributeNode(objattr4);
+	flashobj.setAttribute("type", "application/x-shockwave-flash");
+	flashobj.setAttribute("data", flashpath);
+	flashobj.setAttribute("width", FLASH_WIDTH);
+	flashobj.setAttribute("height", FLASH_HEIGHT);
 
 	var param1 = document.createElement("param");
-	var param1attr1 = document.createAttribute("name");
-		param1attr1.nodeValue = "autostart";
-		param1.setAttributeNode(param1attr1);
-	var param1attr2 = document.createAttribute("value");
-		param1attr2.nodeValue = "true";
-		param1.setAttributeNode(param1attr2);
+	param1.setAttribute("name", "autostart");
+	param1.setAttribute("value", "true");
 
 	var param2 = document.createElement("param");
-	var param2attr1 = document.createAttribute("name");
-		param2attr1.nodeValue = "src";
-		param2.setAttributeNode(param2attr1);
-	var param2attr2 = document.createAttribute("value");
-		param2attr2.nodeValue = flashpath;
-		param2.setAttributeNode(param2attr2);
+	param2.setAttribute("name", "src");
+	param2.setAttribute("value", flashpath);
 
 	flashobj.appendChild(param1);
 	flashobj.appendChild(param2);
