@@ -1,5 +1,5 @@
-const FLASH_WIDTH = 600;
-const FLASH_HEIGHT = 450;
+var FLASH_WIDTH = 600;
+var FLASH_HEIGHT = 450;
 
 // special value that indicates initialization state and shouldn't be put on
 // the stack
@@ -7,7 +7,7 @@ var curflashloop = -1;
 
 // array that serves as size-limited stack to allow skipping back and to
 // prevent showing the same flash loops too frequent
-const MAX_ARRAY_SIZE = 100;
+var MAX_ARRAY_SIZE = 100;
 var shownflashloops = new Array();
 
 function setVisibility(id, visible, block) {
@@ -71,8 +71,7 @@ function replaceFlash() {
 	/* HTML code produced by this DOM thingy:
 		<object type="application/x-shockwave-flash" data="$FLASHPATH"
 			width="$FLASH_WIDTH" height="$FLASH_HEIGHT">
-			<param name="autostart" value="true">
-			<param name="src" value="$FLASHPATH">
+			<param name="movie" value="$FLASHPATH">
 		</object> */
 	var flashobj = document.createElement("object");
 	flashobj.setAttribute("type", "application/x-shockwave-flash");
@@ -80,16 +79,11 @@ function replaceFlash() {
 	flashobj.setAttribute("width", FLASH_WIDTH);
 	flashobj.setAttribute("height", FLASH_HEIGHT);
 
-	var param1 = document.createElement("param");
-	param1.setAttribute("name", "autostart");
-	param1.setAttribute("value", "true");
+	var theParam = document.createElement("param");
+	theParam.setAttribute("name", "movie");
+	theParam.setAttribute("value", flashpath);
 
-	var param2 = document.createElement("param");
-	param2.setAttribute("name", "src");
-	param2.setAttribute("value", flashpath);
-
-	flashobj.appendChild(param1);
-	flashobj.appendChild(param2);
+	flashobj.appendChild(theParam);
 	document.getElementById("content").appendChild(flashobj);
 }
 

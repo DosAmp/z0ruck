@@ -1,2 +1,2 @@
 // example as of 2011-09-11
-const TOTAL_FLASH_COUNT = 3411;
+var TOTAL_FLASH_COUNT = 3411;
