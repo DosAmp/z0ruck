@@ -42,6 +42,7 @@ function addOldFlash() {
 
 function replaceFlash() {
 	document.title = "ZOMG ZUFALL! #" + curflashloop;
+	document.location.hash = curflashloop;
 	document.getElementById("onlinelink").innerHTML =
 		"Online link: <a href=\"http://z0r.de/" + curflashloop +
 		"\">http://z0r.de/" + curflashloop + "</a>";
@@ -149,7 +150,7 @@ function flashByNumber() {
 	}
 }
 
-window.onload = function() {
+window.onload = window.onpopstate = function() {
 	document.getElementById("prev").onclick = prevFlash;
 	document.getElementById("rand").onclick = randomFlash;
 	document.getElementById("next").onclick = nextFlash;
