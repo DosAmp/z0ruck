@@ -41,7 +41,6 @@ function addOldFlash() {
 }
 
 function replaceFlash() {
-	document.title = "ZOMG ZUFALL! #" + curflashloop;
 	document.location.hash = curflashloop;
 	document.getElementById("onlinelink").innerHTML =
 		"Online link: <a href=\"http://z0r.de/" + curflashloop +
@@ -86,6 +85,8 @@ function replaceFlash() {
 
 	flashobj.appendChild(theParam);
 	document.getElementById("content").appendChild(flashobj);
+
+	document.title = "ZOMG ZUFALL! #" + curflashloop;
 }
 
 function prevFlash() {
