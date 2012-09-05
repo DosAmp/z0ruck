@@ -69,13 +69,14 @@ function replaceFlash() {
 	//var flashpath = "http://raz.z0r.de/L/z0r-de_" + curflashloop + ".swf";
 	
 	/* HTML code produced by this DOM thingy:
-		<object type="application/x-shockwave-flash" data="$FLASHPATH"
+		<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000"
 			width="$FLASH_WIDTH" height="$FLASH_HEIGHT">
 			<param name="movie" value="$FLASHPATH">
 		</object> */
 	var flashobj = document.createElement("object");
-	flashobj.setAttribute("type", "application/x-shockwave-flash");
-	flashobj.setAttribute("data", flashpath);
+	flashobj.setAttribute("classid", "clsid:d27cdb6e-ae6d-11cf-96b8-444553540000");
+	//flashobj.setAttribute("type", "application/x-shockwave-flash");
+	//flashobj.setAttribute("data", flashpath);
 	flashobj.setAttribute("width", FLASH_WIDTH);
 	flashobj.setAttribute("height", FLASH_HEIGHT);
 
