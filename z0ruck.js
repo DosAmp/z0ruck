@@ -66,7 +66,7 @@ function replaceFlash() {
 	// ADAPT FILE NAME SCHEMA HERE
 	var flashpath = "z0r-" + curflashloop + ".swf";
 	// for leeching directly off z0r.de (don't do it)
-	//var flashpath = "http://z0r.de/L/z0r-de_" + curflashloop + ".swf";
+	//var flashpath = "http://raz.z0r.de/L/z0r-de_" + curflashloop + ".swf";
 	
 	/* HTML code produced by this DOM thingy:
 		<object type="application/x-shockwave-flash" data="$FLASHPATH"
