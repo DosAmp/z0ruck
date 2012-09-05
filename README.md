@@ -3,9 +3,10 @@ Originally written to allow me to watch my offline copy of the [z0r.de](http://z
 
 ## How to use
 1. Edit **z0ruck.js** and change the `flashpath` variable (line 66) to reflect the file name format of your mirror. For example, if you leech your mirror directly off z0r and put it in the same directory with the script without renaming the files, this would be:
-```js
-var flashpath = "z0r-de_" + curflashloop + ".swf";
-```
+
+   ```js
+   var flashpath = "z0r-de_" + curflashloop + ".swf";
+   ```
 2. Rename **flashcount.js.example** to **flashcount.js** and set the constant `TOTAL_FLASH_COUNT` to the count of flash loops available (including the zeroth!). This can be found from <http://z0r.de/info>, [z0r's Twitter timeline](https://twitter.com/z0rde) or something like `ls -1f *.swf | wc -l`.
 
 ## Other advice
